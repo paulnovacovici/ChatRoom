@@ -16,6 +16,17 @@
     width: 35%;
 }
 
+.innerContainer {
+    flex: 1;
+    position: relative;
+    min-height: 0px;
+}
+
+.typingHint {
+    position: absolute;
+    bottom: 0px;
+}
+
 @media (min-width: 320px) and (max-width: 480px) {
     .outerContainer {
         height: 100%;

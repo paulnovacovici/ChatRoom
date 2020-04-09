@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
     margin: 'auto'
   },
   userInnerContainer: {
-    overflowY: "scroll"
+    overflowY: "auto"
   }
 }));
 

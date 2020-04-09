@@ -67,11 +67,13 @@ export default function Chat() {
     <div className="outerContainer">
       <div className="container">
         <InfoBar room={room} />
-        <Messages messages={messages} name={name} />
-        {userTyping &&
-          <div className="messageContainer justifyStart">
-            <p className="sentText pl-10 "><i>{`${userTyping.name} is typing...`}</i></p>
-          </div>}
+        <div className="innerContainer" >
+          <Messages messages={messages} name={name} userTyping={userTyping} />
+          {userTyping &&
+            <div className="messageContainer justifyStart typingHint">
+              <p className="sentText pl-10 "><i>{`${userTyping.name} is typing...`}</i></p>
+            </div>}
+        </div>
         <Input message={message} setMessage={setMessage} sendMessage={sendMessage} socket={socket} />
       </div>
       <UserContainer users={users} />
